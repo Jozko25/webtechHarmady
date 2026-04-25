@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="072ade2e-fa24-40de-87f5-500c49c11e1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/html/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/gallery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/rs6.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/glightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/rs6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/berlingo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/tico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/glightbox.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +67,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
@@ -81,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1776769306744</updated>
-      <workItem from="1777128944714" duration="2571000" />
+      <workItem from="1777128944714" duration="6465000" />
     </task>
     <servers />
   </component>
