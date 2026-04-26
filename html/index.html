@@ -34,55 +34,7 @@
             </a>
         </div>
     </div>
-    <div class="featured-cars-container">
-        <div class="featured-cars-card">
-            <img src="../images/rs6.webp" alt="Audi RS6">
-            <p class="featured-cars-card-title">Audi RS6</p>
-            <p class="featured-cars-card-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            </p>
-            <ul class="featured-cars-card-stats">
-                <li>Motor: 4.0L V8</li>
-                <li>Výkon: 600 hp</li>
-                <li>0-100: 3.6 s</li>
-            </ul>
-            <a href="car.html" class="featured-cars-card-button">
-               Citat viac
-            </a>
-
-        </div>
-        <div class="featured-cars-card">
-            <img src="../images/berlingo.jpg" alt="Berlingo">
-            <p class="featured-cars-card-title">Citroen Berlingo</p>
-            <p class="featured-cars-card-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            </p>
-            <ul class="featured-cars-card-stats">
-                <li>Motor: 1.5 BlueHDi</li>
-                <li>Výkon: 130 hp</li>
-                <li>Spotreba: 5.3 l/100km</li>
-            </ul>
-            <button class="featured-cars-card-button">
-                Citat viac
-            </button>
-        </div>
-        <div class="featured-cars-card">
-            <img src="../images/tico.png" alt="Daewoo Tico">
-
-            <p class="featured-cars-card-title">Daewoo Tico</p>
-            <p class="featured-cars-card-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            </p>
-            <ul class="featured-cars-card-stats">
-                <li>Motor: 0.8L</li>
-                <li>Výkon: 41 hp</li>
-                <li>Hmotnosť: 620 kg</li>
-            </ul>
-            <button class="featured-cars-card-button">
-                Citat viac
-            </button>
-        </div>
-    </div>
+    <div class="featured-cars-container" id="featuredCars"></div>
     <div class="location-information">
         <div class="location-information-text">
             <h3>Kde sidlime a nas pribeh</h3>
@@ -105,5 +57,61 @@
         &copy; 2026 CarBlog
     </p>
 </footer>
+<script>
+    async function loadCars() {
+      const response = await fetch("../js/cars.json");
+      const cars = await response.json();
+    
+      const container = document.getElementById("featuredCars");
+      container.innerHTML = "";
+    
+      cars.garage.cars.forEach(car => {
+        const card = document.createElement("div");
+        card.className = "featured-cars-card";
+    
+        const performance = getPerformanceText(car.specs.performance);
+    
+        card.innerHTML = `
+          <img src="${car.media.image}" alt="${car.display.fullName}">
+    
+          <p class="featured-cars-card-title">${car.display.fullName}</p>
+    
+          <p class="featured-cars-card-description">
+            ${car.display.description}
+          </p>
+    
+          <ul class="featured-cars-card-stats">
+            <li>Motor: ${car.specs.engine.type}</li>
+            <li>Výkon: ${car.specs.power.value} ${car.specs.power.unit}</li>
+            <li>${performance}</li>
+          </ul>
+    
+          <a href="car.html?id=${car.id}" class="featured-cars-card-button">
+            Čítať viac
+          </a>
+        `;
+    
+        container.appendChild(card);
+      });
+    }
+    
+    function getPerformanceText(performance) {
+      if (performance.zeroToHundred) {
+        return `0-100: ${performance.zeroToHundred.value} ${performance.zeroToHundred.unit}`;
+      }
+    
+      if (performance.fuelConsumption) {
+        return `Spotreba: ${performance.fuelConsumption.value} ${performance.fuelConsumption.unit}`;
+      }
+    
+      if (performance.weight) {
+        return `Hmotnosť: ${performance.weight.value} ${performance.weight.unit}`;
+      }
+    
+      return "";
+    }
+    
+    loadCars();
+    </script>
 </body>
 </html>

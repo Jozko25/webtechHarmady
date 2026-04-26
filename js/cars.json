@@ -8,7 +8,11 @@
         "display": {
           "brand": "Audi",
           "model": "RS6",
-          "fullName": "Audi RS6"
+          "fullName": "Audi RS6",
+          "description": "Výkonné športové kombi s brutálnym V8 motorom a pohonom quattro."
+        },
+        "media": {
+          "image": "../images/rs6.webp"
         },
         "specs": {
           "engine": {
@@ -22,6 +26,60 @@
             "zeroToHundred": {
               "value": 3.6,
               "unit": "s"
+            }
+          }
+        }
+      },
+      {
+        "id": "citroen-berlingo",
+        "display": {
+          "brand": "Citroen",
+          "model": "Berlingo",
+          "fullName": "Citroen Berlingo",
+          "description": "Praktické rodinné auto s nízkou spotrebou a veľkým priestorom."
+        },
+        "media": {
+          "image": "../images/berlingo.jpg"
+        },
+        "specs": {
+          "engine": {
+            "type": "1.5 BlueHDi"
+          },
+          "power": {
+            "value": 130,
+            "unit": "hp"
+          },
+          "performance": {
+            "fuelConsumption": {
+              "value": 5.3,
+              "unit": "l/100km"
+            }
+          }
+        }
+      },
+      {
+        "id": "daewoo-tico",
+        "display": {
+          "brand": "Daewoo",
+          "model": "Tico",
+          "fullName": "Daewoo Tico",
+          "description": "Jednoduché mestské auto, ľahké a úsporné na prevádzku."
+        },
+        "media": {
+          "image": "../images/tico.png"
+        },
+        "specs": {
+          "engine": {
+            "type": "0.8L"
+          },
+          "power": {
+            "value": 41,
+            "unit": "hp"
+          },
+          "performance": {
+            "weight": {
+              "value": 620,
+              "unit": "kg"
             }
           }
         }
