@@ -1,0 +1,31 @@
+{
+  "garage": {
+    "name": "CarBlog Featured Cars",
+    "version": 1,
+    "cars": [
+      {
+        "id": "audi-rs6",
+        "display": {
+          "brand": "Audi",
+          "model": "RS6",
+          "fullName": "Audi RS6"
+        },
+        "specs": {
+          "engine": {
+            "type": "4.0L V8"
+          },
+          "power": {
+            "value": 600,
+            "unit": "hp"
+          },
+          "performance": {
+            "zeroToHundred": {
+              "value": 3.6,
+              "unit": "s"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

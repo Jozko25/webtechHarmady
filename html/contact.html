@@ -8,9 +8,11 @@
 <body>
     <header>
         <nav>
-        <h1 style="font-weight: 300">CarBlog</h1>
+            <a class="nav-logo" href="index.html">
+                <h1 style="font-weight: 300">CarBlog</h1>
+            </a>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Domov</a></li>
             <li><a href="about.html">O nás</a></li>
             <li><a href="contact.html">Kontakt</a></li>
             <li><a href="gallery.html"> Galéria</a></li>
@@ -19,31 +21,34 @@
     </header>
     <main>
         <h2 class="contact-form-title">Kontaktujte nás a my sa ozveme.</h2>
-        <form action="submit" method="post"class="contact-form">
+        <div class="contact-form-container">
+        <form action="submit" method="post"class="contact-form" id="contact-form">
             <label for="name">Meno:</label>
-            <input type="text" id="name" name="name" required>
+            <input placeholder="Ján Novák" type="text" id="name" name="name" class="contact-form-input">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input placeholder="jan@novak.com" type="email" id="email" name="email" class="contact-form-input">
             <label for="message">Správa:</label>
-            <textarea id="message" name="message" required></textarea>
-            <label for="subject">Typ požiadavky</label>
-            <select name="subject" id="subject" class="contact-form-select">
-                <option name="sprava" value="sprava">Správa</option>
-                <option name="rezervacia" value="rezervacia">Rezervácia</option>
-                <option name="ine" value="ine">Iné</option>
-                <option value="ine">Iné</option>
-            </select>
+            <textarea id="message" name="message" class="contact-form-textarea"></textarea>
+            <p class="contact-form-radio-title">Typ požiadavky:</p>
+            <div class="contact-form-radio-group">
+                <input type="radio" id="request-information" name="requestType" value="information" class="contact-form-radio">
+                <label for="request-information" class="contact-form-radio-label">Informácie</label>
+                <input type="radio" id="request-other" name="requestType" value="other" class="contact-form-radio">
+                <label for="request-other" class="contact-form-radio-label">Iné</label>
+            </div>
             <div class="contact-form-checkbox-row">
-                <input type="checkbox" id="checkbox" name="checkbox" class="contact-form-checkbox" required>
+                <input type="checkbox" id="checkbox" name="checkbox" class="contact-form-checkbox">
                 <label for="checkbox">Súhlasím s obchodnými podmienkami</label>
             </div>
-            <button type="submit" class="contact-form-button">Odoslať</button>
+            <button id="submit-btn" type="submit" class="contact-form-button">Odoslať</button>
         </form>
+        </div>
     </main>
     <footer>
         <p>
             &copy; 2026 CarBlog
         </p>
     </footer>
+    <script src="../js/app.js"></script>
 </body>
 </html>

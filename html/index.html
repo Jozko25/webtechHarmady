@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarBlog | Home</title>
+    <title>CarBlog | Domov</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-        <h1 style="font-weight: 300">CarBlog</h1>
+            <a class="nav-logo" href="index.html">
+                <h1 style="font-weight: 300">CarBlog</h1>
+            </a>
         <ul>
             <li><a href="index.html">Domov</a></li>
             <li><a href="about.html">O nás</a></li>
@@ -27,21 +29,24 @@
             <p class="main-image-text-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             </p>
-            <button class="main-image-button">
+            <a href="car.html" class="main-image-button">
                 Citat viac
-            </button>
+            </a>
         </div>
     </div>
     <div class="featured-cars-container">
         <div class="featured-cars-card">
             <img src="../images/rs6.webp" alt="Audi RS6">
-            <p>
+            <p class="featured-cars-card-title">Audi RS6</p>
+            <p class="featured-cars-card-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             </p>
-            <p class="featured-cars-card-title">Audi RS6</p>
-
-
-            <a href="rs6.html" class="featured-cars-card-button">
+            <ul class="featured-cars-card-stats">
+                <li>Motor: 4.0L V8</li>
+                <li>Výkon: 600 hp</li>
+                <li>0-100: 3.6 s</li>
+            </ul>
+            <a href="car.html" class="featured-cars-card-button">
                Citat viac
             </a>
 
@@ -49,11 +54,14 @@
         <div class="featured-cars-card">
             <img src="../images/berlingo.jpg" alt="Berlingo">
             <p class="featured-cars-card-title">Citroen Berlingo</p>
-            <p>
+            <p class="featured-cars-card-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             </p>
-
-
+            <ul class="featured-cars-card-stats">
+                <li>Motor: 1.5 BlueHDi</li>
+                <li>Výkon: 130 hp</li>
+                <li>Spotreba: 5.3 l/100km</li>
+            </ul>
             <button class="featured-cars-card-button">
                 Citat viac
             </button>
@@ -62,9 +70,14 @@
             <img src="../images/tico.png" alt="Daewoo Tico">
 
             <p class="featured-cars-card-title">Daewoo Tico</p>
-            <p>
+            <p class="featured-cars-card-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             </p>
+            <ul class="featured-cars-card-stats">
+                <li>Motor: 0.8L</li>
+                <li>Výkon: 41 hp</li>
+                <li>Hmotnosť: 620 kg</li>
+            </ul>
             <button class="featured-cars-card-button">
                 Citat viac
             </button>
