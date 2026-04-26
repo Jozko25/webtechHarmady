@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CarBlog | Home</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
         <h1 style="font-weight: 300">CarBlog</h1>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Domov</a></li>
             <li><a href="about.html">O nás</a></li>
             <li><a href="contact.html">Kontakt</a></li>
             <li><a href="gallery.html"> Galéria</a></li>
@@ -20,15 +21,25 @@
     </header>
 <main>
     <div class="main-image-container">
-    <img src="../images/rs6.webp" alt="Audi RS6">
+        <img src="../images/rs6.webp" alt="Audi RS6">
+        <div class="main-image-overlay">
+            <p class="main-image-text">Audi RS6</p>
+            <p class="main-image-text-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            </p>
+            <button class="main-image-button">
+                Citat viac
+            </button>
+        </div>
     </div>
     <div class="featured-cars-container">
         <div class="featured-cars-card">
-            <p class="featured-cars-card-title">Audi RS6</p>
             <img src="../images/rs6.webp" alt="Audi RS6">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             </p>
+            <p class="featured-cars-card-title">Audi RS6</p>
+
 
             <a href="rs6.html" class="featured-cars-card-button">
                Citat viac
@@ -36,18 +47,21 @@
 
         </div>
         <div class="featured-cars-card">
-            <p class="featured-cars-card-title">Audi RS6</p>
             <img src="../images/berlingo.jpg" alt="Berlingo">
+            <p class="featured-cars-card-title">Citroen Berlingo</p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             </p>
+
+
             <button class="featured-cars-card-button">
                 Citat viac
             </button>
         </div>
         <div class="featured-cars-card">
-            <p class="featured-cars-card-title">Daewoo Tico</p>
             <img src="../images/tico.png" alt="Daewoo Tico">
+
+            <p class="featured-cars-card-title">Daewoo Tico</p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             </p>
@@ -57,15 +71,20 @@
         </div>
     </div>
     <div class="location-information">
-           <h3>Kde sidlime a nas pribeh</h3>
+        <div class="location-information-text">
+            <h3>Kde sidlime a nas pribeh</h3>
+            <i class="fa-solid fa-heart"></i>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam turpis diam, feugiat quis nulla id, vulputate ullamcorper purus. Phasellus a congue nisl. Duis molestie, tellus ac porttitor tincidunt, ipsum augue tincidunt nulla, eu feugiat velit lectus eget neque. <br/> Integer laoreet tempus ipsum sit amet auctor. Mauris dolor ligula, sodales in nibh sit amet, tincidunt vehicula est. Aenean mi erat, faucibus ut blandit dignissim, iaculis elementum justo. Donec eros odio, ultricies vitae fringilla eget, ornare non nunc. Nulla lorem sem, molestie ut odio in, suscipit aliquam quam. Quisque congue tortor urna, eget elementum massa aliquam ac. Maecenas consequat consectetur ligula. Duis orci metus, pulvinar vitae elementum ac, sagittis ut erat. Sed ac interdum massa.
-
-                Donec ut auctor risus. Ut id pellentesque magna. Aliquam vel fermentum augue. Mauris sed vehicula lectus, sit amet cursus libero. Quisque urna risus, venenatis in ultrices ac, elementum ut quam. Donec vitae elementum ante, quis pharetra nisl. Nam non eros ornare, blandit ante id, pretium neque. <br/>
-
+                <br/><br/>
+                Donec ut auctor risus. Ut id pellentesque magna. Aliquam vel fermentum augue. Mauris sed vehicula lectus, sit amet cursus libero. Quisque urna risus, venenatis in ultrices ac, elementum ut quam. Donec vitae elementum ante, quis pharetra nisl. Nam non eros ornare, blandit ante id, pretium neque.
+                <br/><br/>
                 Praesent sed tincidunt ipsum. Nulla consectetur sem massa, vitae egestas elit maximus eget. Quisque eget scelerisque magna. Phasellus hendrerit justo nulla. Aliquam auctor dui at aliquet commodo. Morbi mollis varius sodales. Phasellus ut ultrices ante. Sed quis nibh vitae metus commodo.
             </p>
-
+        </div>
+        <div class="location-information-image">
+            <img src="https://picsum.photos/700/500" alt="Stock location image">
+        </div>
     </div>
 </main>
 <footer>

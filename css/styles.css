@@ -6,6 +6,16 @@ html, body{
     font-family: 'Helvetica', sans-serif;
 }
 
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}
+
 nav{
     width: auto;
     background-color: black;
@@ -48,10 +58,26 @@ nav a:hover{
     text-decoration: underline;
 }
 
+.main-image-container{
+    position: relative;
+}
+
 .main-image-container img{
     width: 100%;
     height: 60vh;
     object-fit: cover;
+}
+
+.main-image-overlay{
+    position: absolute; 
+    bottom: 2rem;
+    left: 2rem;
+    transform: none;
+    text-align: left;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 2rem;
 }
 
 .featured-cars-container{
@@ -72,7 +98,8 @@ nav a:hover{
     border-radius: 1rem;
     padding: 1rem;
     box-sizing: border-box;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .featured-cars-card img {
@@ -88,8 +115,9 @@ nav a:hover{
     justify-content: center;
 }
 .featured-cars-card-button{
-    display: flex;
+    display: inline-flex;
     justify-content: center;
+    align-items: center;
     background-color: blue;
     color: white;
     font-size: 1.3rem;
@@ -97,39 +125,52 @@ nav a:hover{
     border-radius: 20px;
     padding: 0.5rem;
     cursor: pointer;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    align-self: center;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
 }
 .featured-cars-card-button:hover{
     background-color: black;
     color: white;
 }
 
-.location-information h1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.3rem;
-}
-.location-information p{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.3rem;
-}
 .location-information {
     border: black solid 5px;
     margin: 4rem;
     border-radius: 3rem;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 .location-information h3 {
-    justify-content: center;
-    text-align: center;
+    margin: 0 0 0.5rem 0;
+    text-align: left;
     font-size: 2rem;
+}
+
+.location-information-text{
+    flex: 1 1 60%;
+}
+
+.location-information p{
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.location-information-image{
+    flex: 1 1 40%;
+}
+
+.location-information-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    display: block;
 }
 
 footer{
@@ -212,4 +253,127 @@ footer{
 .contact-form-button:hover{
     background-color: black;
     color: white;
+}
+.contact-form-checkbox-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.contact-form-checkbox-row input{
+    margin-right: 1rem;
+}
+
+.contact-form-checkbox{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.contact-form-checkbox:checked{
+    background-color: black;
+    color: white;
+}
+.contact-form-select{
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.contact-form-select option{
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.contact-form-select option:hover{
+    background-color: black;
+    color: white;
+}
+.about-title{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem
+}
+.about-text{
+    margin: 10rem;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 300;
+}
+.about-cta{
+    background-color: blue;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-cta:hover{
+    background-color: black;
+    color: white;
+}
+
+.fa-solid{
+    font-size: 2rem;
+    color: red;
+    margin-bottom: 1rem;
+}
+.fa-heart{
+    font-size: 2rem;
+}
+
+.location-information .fa-heart{
+    display: block;
+    width: fit-content;
+    margin: 0 0 1rem 0;
+}
+.main-image-text{
+    font-size: 2rem;
+    margin: 0 0 0.75rem 0;
+}
+.main-image-text-description{
+    font-size: 1.3rem;
+    margin: 0 0 1rem 0;
+}
+
+.main-image-button{
+    background-color: blue;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.main-image-button:hover{
+    background-color: black;
+}
+
+.car-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.car-image-text{
+    max-width: 45ch;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
