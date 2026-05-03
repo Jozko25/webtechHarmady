@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarBlog | Garáž</title>
+  <link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--  font awesome - ikonky-->
+</head>
+<body>
+<header>
+  <nav>
+    <a class="nav-logo" href="./index.html">
+      <h1 style="font-weight: 300">CarBlog</h1>
+    </a>
+    <ul>
+      <li><a href="./index.html">Domov</a></li>
+      <li><a href="./about.html">O nás</a></li>
+      <li><a href="./contact.html">Kontakt</a></li>
+      <li><a href="./gallery.html"> Galéria</a></li>
+      <li><a href="./garage.html">Garáž</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="main-image-container">
+    <img src="../images/rs6.webp" alt="Audi RS6">
+    <div class="main-image-overlay">
+      <p class="main-image-text">Naša garáž</p>
+      <p class="main-image-text-description">
+        Prehlad aut.
+      </p>
+      <a href="#garage-cars-table" class="main-image-button">Zobraziť tabuľku</a>
+    </div>
+  </div>
+
+  <section class="garage-table-section" id="garage-cars-table">
+    <h2 class="garage-table-title">Nasa garaz</h2>
+    <p class="garage-table-lead" id="garage-table-status">Nacitavam auta...</p>
+    <div class="garage-table-wrap">
+      <table class="garage-table">
+        <thead>
+        <tr>
+          <th scope="col">Model</th>
+          <th scope="col">Motor</th>
+          <th scope="col">Vykon</th>
+          <th scope="col">Viac info</th>
+          <th scope="col">Detail</th>
+        </tr>
+        </thead>
+        <tbody id="garage-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>
+    &copy; 2026 CarBlog
+  </p>
+</footer>
+<script>
+  function getPerformanceText(performance) {
+    if (performance.zeroToHundred) {
+      return `0-100: ${performance.zeroToHundred.value} ${performance.zeroToHundred.unit}`;
+    }
+    if (performance.fuelConsumption) {
+      return `Spotreba: ${performance.fuelConsumption.value} ${performance.fuelConsumption.unit}`;
+    }
+    if (performance.weight) {
+      return `Hmotnosť: ${performance.weight.value} ${performance.weight.unit}`;
+    }
+    return "—";
+  }
+
+  function carDetailHref(id) {
+    if (id === "citroen-berlingo") {
+      return "./car2.html";
+    }
+    if (id === "audi-rs6") {
+      return "./car.html";
+    }
+    return `./car.html?id=${encodeURIComponent(id)}`;
+  }
+
+  async function loadGarageTable() {
+    const tbody = document.getElementById("garage-table-body");
+    const status = document.getElementById("garage-table-status");
+
+    try {
+      const response = await fetch("../js/cars.json");
+      if (!response.ok) {
+        throw new Error("Internetova chyba");
+      }
+      const data = await response.json();
+      const cars = data.garage.cars;
+
+      tbody.innerHTML = "";
+      cars.forEach((car) => {
+        const perf = getPerformanceText(car.specs.performance);
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${car.display.fullName}</td>
+          <td>${car.specs.engine.type}</td>
+          <td>${car.specs.power.value} ${car.specs.power.unit}</td>
+          <td>${perf}</td>
+          <td><a href="${carDetailHref(car.id)}">Čítať viac</a></td>
+        `;
+        tbody.appendChild(row);
+      });
+
+    } catch {
+      tbody.innerHTML = "";
+    }
+  }
+
+  loadGarageTable();
+</script>
+</body>
+</html>

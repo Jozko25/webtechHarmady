@@ -10,14 +10,15 @@
 <body>
     <header>
         <nav>
-            <a class="nav-logo" href="index.html">
+            <a class="nav-logo" href="./index.html">
                 <h1 style="font-weight: 300">CarBlog</h1>
             </a>
         <ul>
-            <li><a href="index.html">Domov</a></li>
-            <li><a href="about.html">O nás</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="gallery.html"> Galéria</a></li>
+            <li><a href="./index.html">Domov</a></li>
+            <li><a href="./about.html">O nás</a></li>
+            <li><a href="./contact.html">Kontakt</a></li>
+            <li><a href="./gallery.html"> Galéria</a></li>
+            <li><a href="./garage.html">Garáž</a></li>
         </ul>
         </nav>
     </header>
@@ -29,7 +30,7 @@
             <p class="main-image-text-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             </p>
-            <a href="car.html" class="main-image-button">
+            <a href="./car.html" class="main-image-button">
                 Citat viac
             </a>
         </div>
@@ -46,7 +47,7 @@
                 <br/><br/>
                 Praesent sed tincidunt ipsum. Nulla consectetur sem massa, vitae egestas elit maximus eget. Quisque eget scelerisque magna. Phasellus hendrerit justo nulla. Aliquam auctor dui at aliquet commodo. Morbi mollis varius sodales. Phasellus ut ultrices ante. Sed quis nibh vitae metus commodo.
             </p>
-            <a href="about.html" class="about-us-cta-button"> Zistit o nas viac </a>
+            <a href="./about.html" class="about-us-cta-button"> Zistit o nas viac </a>
         </div>
         <div class="location-information-image">
             <img src="https://picsum.photos/700/500" alt="Stock location image">
@@ -114,12 +115,12 @@
 
     function carDetailHref(id) {
       if (id === "citroen-berlingo") {
-        return "car2.html";
+        return "./car2.html";
       }
       if (id === "audi-rs6") {
-        return "car.html";
+        return "./car.html";
       }
-      return `car.html?id=${encodeURIComponent(id)}`;
+      return `./car.html?id=${encodeURIComponent(id)}`;
     }
     
     loadCars();

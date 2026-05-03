@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="072ade2e-fa24-40de-87f5-500c49c11e1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/html/car2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/garage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rucnyDesignHarmady.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/car.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/car2.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/car2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
@@ -67,6 +72,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/images" />
@@ -89,7 +95,7 @@
       <workItem from="1777128944714" duration="6465000" />
       <workItem from="1777314087188" duration="15000" />
       <workItem from="1777582640155" duration="1893000" />
-      <workItem from="1777817665775" duration="1247000" />
+      <workItem from="1777817665775" duration="4103000" />
     </task>
     <servers />
   </component>

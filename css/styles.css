@@ -627,3 +627,64 @@ footer{
 
 
 }
+
+.garage-table-section{
+    max-width: 56rem;
+    margin: 2.5rem auto 3rem;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+}
+
+.garage-table-title{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 0.75rem;
+    font-weight: 600;
+}
+
+.garage-table-lead{
+    text-align: center;
+    margin: 0 0 1.25rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.garage-table-wrap{
+    overflow-x: auto;
+    border: black solid 5px;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+.garage-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.garage-table th,
+.garage-table td{
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    vertical-align: top;
+}
+
+.garage-table thead th{
+    background-color: #f0f0f0;
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+}
+
+.garage-table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+.garage-table a{
+    color: inherit;
+    font-weight: 600;
+}
+
+.garage-table a:hover{
+    text-decoration: underline;
+}
