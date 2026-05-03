@@ -46,6 +46,7 @@
                 <br/><br/>
                 Praesent sed tincidunt ipsum. Nulla consectetur sem massa, vitae egestas elit maximus eget. Quisque eget scelerisque magna. Phasellus hendrerit justo nulla. Aliquam auctor dui at aliquet commodo. Morbi mollis varius sodales. Phasellus ut ultrices ante. Sed quis nibh vitae metus commodo.
             </p>
+            <a href="about.html" class="about-us-cta-button"> Zistit o nas viac </a>
         </div>
         <div class="location-information-image">
             <img src="https://picsum.photos/700/500" alt="Stock location image">
@@ -86,7 +87,7 @@
             <li>${performance}</li>
           </ul>
     
-          <a href="car.html?id=${car.id}" class="featured-cars-card-button">
+          <a href="${carDetailHref(car.id)}" class="featured-cars-card-button">
             Čítať viac
           </a>
         `;
@@ -109,6 +110,16 @@
       }
     
       return "";
+    }
+
+    function carDetailHref(id) {
+      if (id === "citroen-berlingo") {
+        return "car2.html";
+      }
+      if (id === "audi-rs6") {
+        return "car.html";
+      }
+      return `car.html?id=${encodeURIComponent(id)}`;
     }
     
     loadCars();

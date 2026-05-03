@@ -42,7 +42,6 @@ form.addEventListener("submit",(event) => {
 });
 
 
-
 //json fetching
 
 

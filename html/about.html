@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O nás | CarBlog</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -20,29 +21,74 @@
         </ul>
         </nav>
     </header>
-    <main>
-        <h2 class="about-title">O nás</h2>
-        <p class="about-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam turpis diam, feugiat quis nulla id, vulputate ullamcorper purus. Phasellus a congue nisl. Duis molestie, tellus ac porttitor tincidunt, ipsum augue tincidunt nulla, eu feugiat velit lectus eget neque. <br/> Integer laoreet tempus ipsum sit amet auctor. Mauris dolor ligula, sodales in nibh sit amet, tincidunt vehicula est. Aenean mi erat, faucibus ut blandit dignissim, iaculis elementum justo. Donec eros odio, ultricies vitae fringilla eget, ornare non nunc. Nulla lorem sem, molestie ut odio in, suscipit aliquam quam. Quisque congue tortor urna, eget elementum massa aliquam ac. Maecenas consequat consectetur ligula. Duis orci metus, pulvinar vitae elementum ac, sagittis ut erat. Sed ac interdum massa.
-        </p>
-        <p class="about-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum arcu nec dignissim tincidunt. Vestibulum ipsum justo, consectetur a eros vitae, efficitur varius ligula. Suspendisse vel tristique metus. Phasellus euismod eleifend sapien in scelerisque. Phasellus vestibulum orci et finibus euismod. Vestibulum bibendum, libero quis ultricies tristique, enim purus vehicula erat, tempor ullamcorper eros ligula eget mi. Aliquam convallis accumsan euismod. Aliquam erat volutpat. Mauris nulla libero, pharetra at tempus ac, consequat dictum ante. Donec vulputate libero vitae interdum interdum. Aenean fringilla tellus vitae libero iaculis bibendum. Ut porta in lacus sit amet fermentum. Aenean sodales lectus vitae eleifend porttitor.
+    <main class="about-page">
+        <div class="main-image-container about-hero">
+            <img src="../images/rs6.webp" alt="CarBlog – autá a recenzie">
+            <div class="main-image-overlay">
+                <p class="main-image-text">O nás</p>
+                <p class="main-image-text-description">
+                    Píšeme o autách priamo a zrozumiteľne — recenzie, porovnania a tipy pre každého, kto sa rád viezie alebo len študuje techniku.
+                </p>
+                <a href="gallery.html" class="main-image-button">Galéria</a>
+            </div>
+        </div>
 
+        <section class="about-section">
+            <h2 class="about-title">CarBlog v skratke</h2>
+            <p class="about-lead">
+                Sme malý redakčný tím nadšencov do motorov, podvozkov a zvuku výfuku aj tichého naftového nájazdu do práce.
+            </p>
+            <p class="about-text">
+                CarBlog sme rozbehli preto, lebo nás unavovali stránky plné omáčky a reklamy. Chceli sme miesto, kde nájdete fakty, vlastné dojmy z jazdy a fotky, ktoré zodpovedajú realite — bez zbytočného marketingového lesku.
+            </p>
+            <p class="about-text">
+                Testy píšeme tak, aby mali zmysel aj pre čitateľa, ktorý auto len porovnáva: čo je v kabíne kam uložiť, ako auto sedí na dialnici aj po rozbitých okreskách, a čo by sme si pri kúpe sami overili ešte raz. Ak nájdete chybu alebo máte vlastné skúsenosti s modelom z článku, radi ich doplníme — kontakt je vždy otvorený.
+            </p>
+        </section>
 
-        </p>
-        <p class="about-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum arcu nec dignissim tincidunt. Vestibulum ipsum justo, consectetur a eros vitae, efficitur varius ligula. Suspendisse vel tristique metus. Phasellus euismod eleifend sapien in scelerisque. Phasellus vestibulum orci et finibus euismod. Vestibulum bibendum, libero quis ultricies tristique, enim purus vehicula erat, tempor ullamcorper eros ligula eget mi. Aliquam convallis accumsan euismod. Aliquam erat volutpat. Mauris nulla libero, pharetra at tempus ac, consequat dictum ante. Donec vulputate libero vitae interdum interdum. Aenean fringilla tellus vitae libero iaculis bibendum. Ut porta in lacus sit amet fermentum. Aenean sodales lectus vitae eleifend porttitor.
+        <div class="about-highlights">
+            <div class="about-highlight">
+                <i class="fa-solid fa-car" aria-hidden="true"></i>
+                <h3>Recenzie z jazdy</h3>
+                <p>
+                    Neostaneme pri technických tabuľkách — zaujíma nás, ako sa auto správa v bežný deň.
+                </p>
+            </div>
+            <div class="about-highlight">
+                <i class="fa-solid fa-users" aria-hidden="true"></i>
+                <h3>Pre čitateľov</h3>
+                <p>
+                    Pišeme zrozumiteľnou slovenčinou; špecialisti aj ľudia, čo len nakúpia rodinné auto, nájdu, čo hľadajú.
+                </p>
+            </div>
+            <div class="about-highlight">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <h3>Bez bullshitu</h3>
+                <p>
+                    Označíme nedostatky aj prednosti. Žiadne tajné „partnerstvá“ s predajcami — názor je náš.
+                </p>
+            </div>
+        </div>
 
+        <div class="location-information about-location-tweak">
+            <div class="location-information-text">
+                <h3>Kde sídlime a náš príbeh</h3>
+                <i class="fa-solid fa-heart"></i>
+                <p>
+                    Redakcia pracuje rozptýlene — časť z nás z Bratislavy, časť z regiónov — stretávame sa pri testoch priamo na cestách a parkoviskách. Vznikli sme z diskusií pri káve o tom, ktoré kombi má rozumnejší batožinový priestor a či má ešte zmysel malý objem atmosféry.
+                    <br><br>
+                    Dnes CarBlog funguje ako voľné zoskupenie autorov: niekto fotí, niekto píše, niekto ťahá štatistiky. Spoločné je len to, že autá berieme osobne — a veríme, že to v textoch poznať.
+                </p>
+                <a href="index.html" class="about-us-cta-button">Späť na úvod</a>
+            </div>
+            <div class="location-information-image">
+                <img src="https://picsum.photos/700/500" alt="Ilustračná fotka tímu a ciest">
+            </div>
+        </div>
 
-        </p>
-        <p class="about-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum arcu nec dignissim tincidunt. Vestibulum ipsum justo, consectetur a eros vitae, efficitur varius ligula. Suspendisse vel tristique metus. Phasellus euismod eleifend sapien in scelerisque. Phasellus vestibulum orci et finibus euismod. Vestibulum bibendum, libero quis ultricies tristique, enim purus vehicula erat, tempor ullamcorper eros ligula eget mi. Aliquam convallis accumsan euismod. Aliquam erat volutpat. Mauris nulla libero, pharetra at tempus ac, consequat dictum ante. Donec vulputate libero vitae interdum interdum. Aenean fringilla tellus vitae libero iaculis bibendum. Ut porta in lacus sit amet fermentum. Aenean sodales lectus vitae eleifend porttitor.
-
-
-        </p>
-        <a href="contact.html" class="about-cta">
-            Kontaktujte nás
-        </a>
+        <div class="about-cta-wrap">
+            <a href="contact.html" class="about-cta">Kontaktujte nás</a>
+        </div>
     </main>
     <footer>
         <p>

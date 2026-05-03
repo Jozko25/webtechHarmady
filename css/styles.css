@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 html, body{
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Helvetica', sans-serif;
+    font-family: "Manrope";
 }
 
 body{
@@ -22,6 +24,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 10vh;
 
 }
 
@@ -32,10 +35,42 @@ nav ul {
     padding: 0;
 }
 
+@media (max-width: 767px) {
+    nav {
+        height: auto;
+        min-height: 10vh;
+        flex-wrap: wrap;
+        row-gap: 0.75rem;
+        padding: 0.75rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.35rem;
+    }
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
 nav li {
     margin-left: 1rem;
     margin-right: 4rem;
     text-wrap: wrap;
+    background-color: grey;
+    border-radius: 15px;
+    padding: 0.7rem 2rem;
+    text-decoration: none;
+}
+
+nav li:hover{
+    text-decoration: none;
+    background-color: darkgrey;
 }
 
 
@@ -51,11 +86,12 @@ nav a{
     align-items: center;
     text-decoration: none;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
+
 }
 
 nav a:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .main-image-container{
@@ -85,16 +121,17 @@ nav a:hover{
     margin-left: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     justify-items: center;
 
 
 }
 
 .featured-cars-card{
-    background-color: transparent;
+    background-color: black;
     border: black solid 5px;
-    height: 55vh;
+    height: 65vh;
+    color: white;
     border-radius: 1rem;
     padding: 1rem;
     box-sizing: border-box;
@@ -121,7 +158,7 @@ nav a:hover{
     font-size: 1rem;
     line-height: 1.45;
     margin: 0;
-    color: #222;
+    color: white;
     text-align: left;
     line-clamp: 3;
     display: -webkit-box;
@@ -134,29 +171,28 @@ nav a:hover{
     margin: 0.5rem 0 0;
     padding-left: 1.2rem;
     text-align: left;
-    color: #222;
+    color: white;
     font-size: 0.95rem;
     line-height: 1.4;
 }
 .featured-cars-card-button{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    background-color: grey;
     color: white;
     font-size: 1.3rem;
     border: none;
-    border-radius: 20px;
-    padding: 0.5rem;
+    border-radius: 10px;
+    padding: 0.7rem 2rem;
     cursor: pointer;
     margin-top: auto;
     margin-bottom: 1rem;
     align-self: center;
-    padding: 0.5rem 2rem;
     text-decoration: none;
 }
 .featured-cars-card-button:hover{
-    background-color: black;
+    background-color: darkgrey;
     color: white;
 }
 
@@ -322,34 +358,119 @@ footer{
     background-color: black;
     color: white;
 }
+.about-page{
+    padding-bottom: 2rem;
+}
+
+.about-hero .main-image-overlay{
+    max-width: min(36rem, 90vw);
+}
+
+.about-section{
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 0;
+    box-sizing: border-box;
+}
+
 .about-title{
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 2rem
+    margin: 0 0 1.25rem;
+    font-weight: 600;
 }
+
+.about-lead{
+    font-size: 1.25rem;
+    line-height: 1.55;
+    font-weight: 350;
+    margin: 0 0 1.5rem;
+    text-align: center;
+    color: #222;
+}
+
 .about-text{
-    margin: 2rem 10rem 2rem 10rem;
-    font-size: 1.3rem;
+    margin: 0 0 1.25rem;
+    font-size: 1.05rem;
     text-align: left;
-    line-height: 1.5;
-    font-weight: 300;
+    line-height: 1.6;
+    font-weight: 350;
     background-color: #f0f0f0;
-    padding: 3rem;
+    padding: 1.75rem 1.5rem;
     border-radius: 1rem;
 }
+
+.about-text:last-of-type{
+    margin-bottom: 0;
+}
+
+.about-highlights{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.25rem;
+    max-width: 56rem;
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+.about-highlight{
+    border: black solid 5px;
+    border-radius: 1rem;
+    padding: 1.5rem 1.25rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.about-highlight h3{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.about-highlight p{
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.about-highlight .fa-solid{
+    margin-bottom: 0.35rem;
+}
+
+.about-location-tweak{
+    margin: 2.5rem 1.5rem 0;
+}
+
+@media (min-width: 900px) {
+    .about-location-tweak{
+        margin: 2.5rem 4rem 0;
+    }
+}
+
+.about-cta-wrap{
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 1rem 1rem;
+}
+
 .about-cta{
-    background-color: blue;
+    background-color: grey;
     color: white;
-    font-size: 2rem;
+    font-size: 1.3rem;
     border: none;
     border-radius: 20px;
-    padding: 0.5rem;
+    padding: 0.65rem 2.25rem;
     cursor: pointer;
-    margin: 2rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 .about-cta:hover{
     background-color: black;
@@ -380,13 +501,14 @@ footer{
 }
 
 .main-image-button{
-    background-color: blue;
+    background-color: black;
     color: white;
     font-size: 1.1rem;
     border: none;
     border-radius: 20px;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 2rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .main-image-button:hover{
@@ -481,4 +603,27 @@ footer{
     font-size: 1rem;
     cursor: pointer;
     margin-right: 1rem;
+}
+
+.about-us-cta-button{
+        display: flex;
+        justify-content: center;
+        background-color: grey;
+        color: white;
+        font-size: 1.3rem;
+        border: none;
+        border-radius: 10px;
+        padding: 0.7rem 2rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        align-self: center;
+        text-decoration: none;
+}
+
+.gallery-subtitle{
+    font-size: 1.3rem;
+    text-align: center;
+
+
+
 }

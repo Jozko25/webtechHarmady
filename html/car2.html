@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <title>Citroen Berlingo</title>
+</head>
+<body>
+<header>
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <h1 style="font-weight: 300">CarBlog</h1>
+    </a>
+    <ul>
+      <li><a href="index.html">Domov</a></li>
+      <li><a href="about.html">O nás</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+      <li><a href="gallery.html"> Galéria</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="car-image-container">
+  <img id="heroImage"
+       style="width: 120vh; border-radius: 1rem; margin: 3rem; height: 50vh; object-fit: cover;"
+       src=""
+       alt="">
+  <div class="car-image-text">
+    <h1 id="heroTitle" style="text-align: center; margin-top: 2rem; font-weight: 400;"></h1>
+    <p id="heroDescription"></p>
+    <ul id="heroStats"></ul>
+    <a href="contact.html" class="main-image-button">
+      Kontaktujte nás
+    </a>
+  </div>
+</div>
+<div>
+  <p class="featured-cars-car">
+    Viac aut:
+  </p>
+</div>
+<div class="featured-cars-container" id="featuredCars"></div>
+<div>
+</div>
+<script>
+  const PAGE_CAR_ID = "citroen-berlingo";
+
+  function getPerformanceText(performance) {
+    if (performance.zeroToHundred) {
+      return `0-100: ${performance.zeroToHundred.value} ${performance.zeroToHundred.unit}`;
+    }
+    if (performance.fuelConsumption) {
+      return `Spotreba: ${performance.fuelConsumption.value} ${performance.fuelConsumption.unit}`;
+    }
+    if (performance.weight) {
+      return `Hmotnosť: ${performance.weight.value} ${performance.weight.unit}`;
+    }
+    return "";
+  }
+
+  function carDetailHref(id) {
+    if (id === "citroen-berlingo") {
+      return "car2.html";
+    }
+    if (id === "audi-rs6") {
+      return "car.html";
+    }
+    return `car.html?id=${encodeURIComponent(id)}`;
+  }
+
+  function fillHero(car) {
+    document.title = car.display.fullName;
+
+    const img = document.getElementById("heroImage");
+    img.src = car.media.image;
+    img.alt = car.display.fullName;
+
+    document.getElementById("heroTitle").textContent = car.display.fullName;
+    document.getElementById("heroDescription").textContent = car.display.description;
+
+    const stats = document.getElementById("heroStats");
+    stats.innerHTML = "";
+
+    const lines = [
+      `Motor: ${car.specs.engine.type}`,
+      `Výkon: ${car.specs.power.value} ${car.specs.power.unit}`,
+      getPerformanceText(car.specs.performance),
+    ].filter(Boolean);
+
+    lines.forEach((text) => {
+      const li = document.createElement("li");
+      li.textContent = text;
+      stats.appendChild(li);
+    });
+  }
+
+  function renderFeaturedCards(cars, excludeId) {
+    const container = document.getElementById("featuredCars");
+    container.innerHTML = "";
+
+    cars
+      .filter((car) => car.id !== excludeId)
+      .forEach((car) => {
+        const card = document.createElement("div");
+        card.className = "featured-cars-card";
+
+        const performance = getPerformanceText(car.specs.performance);
+
+        card.innerHTML = `
+          <img src="${car.media.image}" alt="${car.display.fullName}">
+
+          <p class="featured-cars-card-title">${car.display.fullName}</p>
+
+          <p class="featured-cars-card-description">
+            ${car.display.description}
+          </p>
+
+          <ul class="featured-cars-card-stats">
+            <li>Motor: ${car.specs.engine.type}</li>
+            <li>Výkon: ${car.specs.power.value} ${car.specs.power.unit}</li>
+            <li>${performance}</li>
+          </ul>
+
+          <a href="${carDetailHref(car.id)}" class="featured-cars-card-button">
+            Čítať viac
+          </a>
+        `;
+
+        container.appendChild(card);
+      });
+  }
+
+  async function loadPage() {
+    const response = await fetch("../js/cars.json");
+    const data = await response.json();
+    const cars = data.garage.cars;
+
+    const pageCar = cars.find((c) => c.id === PAGE_CAR_ID);
+    if (!pageCar) {
+      return;
+    }
+
+    fillHero(pageCar);
+    renderFeaturedCards(cars, PAGE_CAR_ID);
+  }
+
+  loadPage();
+</script>
+
+</body>
+</html>
